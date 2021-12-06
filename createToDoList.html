@@ -1,0 +1,103 @@
+﻿<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>Tips - פשוט להוקיר מתנדבים</title>
+    <link href="img/heart.png" rel="icon" />
+
+    <meta name="description" content="אתר טיפס (Tips), אתר המכיל טיפים עבור רכזי התנדבות בנושאי ליווי והוקרת מתנדבים באופן פרונטלי ווירטואלי. האת מכיל טיפים, וכלים. האתר מדמה רשת חברתית עבור הרכזים" />
+    <meta name="keywords" content="tips, manager, volenteer, escort, thanks, recognition, הוקרה, תודה, ליווי, פרופיל, מתנדבים, מנהלים, רכזים, ניהול, קורונה, וירטואלי, פרונטלי, טיפים" />
+    <meta name="author" content="final project - Hit Holon - Ori Allon and May Elazar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/toDolistStyle.css" rel="stylesheet" />
+
+
+
+
+
+    <!-- Scripts -->
+
+
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <script src="jScripts/createToDoList.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"></script>
+
+
+</head>
+<body dir="rtl">
+
+
+
+
+    <article>
+
+
+        <div id="containerToDoListpage">
+            <!--  nav -->
+
+
+            <header id="header">
+                <nav>
+                    <ul>
+
+                        <li id="TipsLI">
+                            <h1><a href="index.html"><img src="./img/TIPS_Logo.png" /></a></h1>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </header>
+
+
+
+
+
+            <section>
+                <div style="padding: 35px;">
+                    <h2>יצירת רשימה אישית</h2>
+                    <p>הוסיפו פריטים והכינו רשימה אישית למטלות שלכם והדפיסו אותה כך שהמשימות תמיד יהיו מול העיניים.</p>
+                    <button id="addItemBtn">
+                        הוספת פריט לרשימה +
+                    </button>
+                </div>
+                <div id="addItemCon">
+                    <input id="TextList" type="text" />
+                    <button id="addToList">
+                        <img src="img/checkMark.png" />
+                        <span id="addItemBtnSpan">הוספה</span>
+
+
+                    </button>
+                    <button id="deleteAddItem">
+                        <img src="img/Xmark.png" />
+                        <span id="deleteItemBtnSpan">מחק</span>
+                    </button>
+                </div>
+                <div id="listContainer">
+                    <div>
+                        <ul id="toDoListConteiner"></ul>
+                    </div>
+                    <button id="downloadPdf">להדפסת הרשימה</button>
+                </div>
+              
+            </section>
+    </article>
+    <!-- END nav -->
+
+
+
+
+    <footer>
+        <a id="aboutLink" href="#">מי אנחנו?</a>
+
+        <p id="Pfooter">תוצר זה פותח במסגרת פרוייקט גמר לתואר ראשון<a target="”_blank”" href="https://www.hit.ac.il/telem/overview"> בפקולטה לטכנולוגיות למידה </a>,HIT ובשיתוף הרשת הישראלית להתנדבות.</p>
+    </footer>
+
+    </div>
+</body>
+
+</html>

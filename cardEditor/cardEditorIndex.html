@@ -1,0 +1,136 @@
+﻿<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title> כלי- עורך ברכות</title>
+    <meta name="description" content="כלי מתוך אתר - טיפ'ס (TIPS), אתר עבור רכזי התנדבות. האתר מכיל טיפים אודות הוקרה וליווי מתנדבים. הכלי הוא עזר עבור הרכזים להכנת ברכות למתנדבים, למשפחותיהם ולקרוביהם לכך להוקיר את המתנדבים בקלות." />
+    <meta name="keywords" content="כלי,TOOL, CARD EDITOR, volenteers, volenteer manager, give, thanks, תודה, הוקרה, ברכות, ברכה, רכזי התנדבות, רכזים, מנהלים" />
+    <meta name="author" content="final project - Hit Holon - Ori Allon and May Elazar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <!--<link href="styles/reset.css" rel="stylesheet" />-->
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+
+    <!-- Scripts -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js" type="text/javascript"></script>
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <!-- or -->
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <!--<script src="jScripts/JavaScript.js"></script>-->
+    <script src="jScripts/cardEditorJavaScript.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!--<h1>להגיד תודה ולשמח את המתנדבים שלך</h1>
+        <br />-->
+
+        <!--<p>הזינו את הטקסט </p>
+        <br /><textarea id="upperTXT" rows="2" cols="20" placeholder="type top text here"></textarea>
+        <br />
+        <br /><textarea id="lowerTXT" rows="2" cols="20" placeholder="type bottom text here"></textarea>
+        <br />-->
+
+        <div id="myContentCanvas">
+            <br />
+
+
+            <div id="proporties">
+                <button type="button" class="collapsible">הוספת טקסט</button>
+                <div id="fontProporties" class="content">
+
+                    <input id="addTxtBtn" class="textAreaClass" type="button" value="הוספת טקסט" />
+                    <input id="deleteTXT" type="image" value="delete image" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA1MCA1MCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDIxIDAgQyAxOS4zNTQ1NDUgMCAxOCAxLjM1NDU0NTUgMTggMyBMIDE4IDUgTCAxMC4xNTYyNSA1IEEgMS4wMDAxIDEuMDAwMSAwIDAgMCA5LjgzNzg5MDYgNSBMIDggNSBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgOCA3IEwgOS4wODU5Mzc1IDcgTCAxMi43MDUwNzggNDcuNSBMIDEyLjcwNzAzMSA0Ny41MDk3NjYgQyAxMi44NTcyNjIgNDguODYyMjMyIDEzLjk4MTg3MiA1MCAxNS40MDAzOTEgNTAgTCAzNC41OTk2MDkgNTAgQyAzNi4wMTgxMjggNTAgMzcuMTQyNjkxIDQ4Ljg2MjI2NiAzNy4yOTI5NjkgNDcuNTA5NzY2IEwgMzcuMjk0OTIyIDQ3LjUgTCA0MC45MTQwNjIgNyBMIDQyIDcgQSAxLjAwMDEgMS4wMDAxIDAgMSAwIDQyIDUgTCA0MC4xNzM4MjggNSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzkuODQxNzk3IDUgTCAzMiA1IEwgMzIgMyBDIDMyIDEuMzU0NTQ1NSAzMC42NDU0NTUgMCAyOSAwIEwgMjEgMCB6IE0gMjEgMiBMIDI5IDIgQyAyOS41NTQ1NDUgMiAzMCAyLjQ0NTQ1NDUgMzAgMyBMIDMwIDUgTCAyMCA1IEwgMjAgMyBDIDIwIDIuNDQ1NDU0NSAyMC40NDU0NTUgMiAyMSAyIHogTSAxMS4wOTM3NSA3IEwgMTguODMyMDMxIDcgQSAxLjAwMDEgMS4wMDAxIDAgMCAwIDE5LjE1ODIwMyA3IEwgMzAuODMyMDMxIDcgQSAxLjAwMDEgMS4wMDAxIDAgMCAwIDMxLjE1ODIwMyA3IEwgMzguOTA2MjUgNyBMIDM1LjMwNjY0MSA0Ny4yODkwNjIgQyAzNS4yNTY5MTggNDcuNzM2NTYzIDM0Ljk4MTA5MSA0OCAzNC41OTk2MDkgNDggTCAxNS40MDAzOTEgNDggQyAxNS4wMTg5MDkgNDggMTQuNzQzMDgyIDQ3LjczNjU2MyAxNC42OTMzNTkgNDcuMjg5MDYyIEwgMTEuMDkzNzUgNyB6IE0gMTguOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMTggMTEgTCAxOCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMjAgNDQgTCAyMCAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMTguOTg0Mzc1IDkuOTg2MzI4MSB6IE0gMjQuOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjQgMTEgTCAyNCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMjYgNDQgTCAyNiAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjQuOTg0Mzc1IDkuOTg2MzI4MSB6IE0gMzAuOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzAgMTEgTCAzMCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMzIgNDQgTCAzMiAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzAuOTg0Mzc1IDkuOTg2MzI4MSB6Ij48L3BhdGg+PC9zdmc+" />
+                    <br />
+                    בחר צבע לכיתוב:
+                    <input id="fontColor" type="color" name="favcolor" value="#000000">
+                    <br />
+                    בחר פונט:
+                    <select id="selectFont" name="selectFont" class="textAreaClass">
+                        <option> Sans-Serif </option>
+                        <option> Arial </option>
+                        <option> Serif </option>
+                        <option> Tahoma </option>
+                        <option> Verdana </option>
+                        <option> Rubik </option>
+                        <option> Lucida Sans Unicode </option>
+                    </select>
+                    <br />
+                    גודל:
+                    <select id="SelectFontSize" name="SelectFontSize" class="textAreaClass"></select>
+                </div>
+
+                <button type="button" class="collapsible">מדבקות</button>
+                <div id="stickers" class="content">
+                    <input id="deleteSticker" class="deleteImageClass" type="image" value="delete image" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA1MCA1MCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDIxIDAgQyAxOS4zNTQ1NDUgMCAxOCAxLjM1NDU0NTUgMTggMyBMIDE4IDUgTCAxMC4xNTYyNSA1IEEgMS4wMDAxIDEuMDAwMSAwIDAgMCA5LjgzNzg5MDYgNSBMIDggNSBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgOCA3IEwgOS4wODU5Mzc1IDcgTCAxMi43MDUwNzggNDcuNSBMIDEyLjcwNzAzMSA0Ny41MDk3NjYgQyAxMi44NTcyNjIgNDguODYyMjMyIDEzLjk4MTg3MiA1MCAxNS40MDAzOTEgNTAgTCAzNC41OTk2MDkgNTAgQyAzNi4wMTgxMjggNTAgMzcuMTQyNjkxIDQ4Ljg2MjI2NiAzNy4yOTI5NjkgNDcuNTA5NzY2IEwgMzcuMjk0OTIyIDQ3LjUgTCA0MC45MTQwNjIgNyBMIDQyIDcgQSAxLjAwMDEgMS4wMDAxIDAgMSAwIDQyIDUgTCA0MC4xNzM4MjggNSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzkuODQxNzk3IDUgTCAzMiA1IEwgMzIgMyBDIDMyIDEuMzU0NTQ1NSAzMC42NDU0NTUgMCAyOSAwIEwgMjEgMCB6IE0gMjEgMiBMIDI5IDIgQyAyOS41NTQ1NDUgMiAzMCAyLjQ0NTQ1NDUgMzAgMyBMIDMwIDUgTCAyMCA1IEwgMjAgMyBDIDIwIDIuNDQ1NDU0NSAyMC40NDU0NTUgMiAyMSAyIHogTSAxMS4wOTM3NSA3IEwgMTguODMyMDMxIDcgQSAxLjAwMDEgMS4wMDAxIDAgMCAwIDE5LjE1ODIwMyA3IEwgMzAuODMyMDMxIDcgQSAxLjAwMDEgMS4wMDAxIDAgMCAwIDMxLjE1ODIwMyA3IEwgMzguOTA2MjUgNyBMIDM1LjMwNjY0MSA0Ny4yODkwNjIgQyAzNS4yNTY5MTggNDcuNzM2NTYzIDM0Ljk4MTA5MSA0OCAzNC41OTk2MDkgNDggTCAxNS40MDAzOTEgNDggQyAxNS4wMTg5MDkgNDggMTQuNzQzMDgyIDQ3LjczNjU2MyAxNC42OTMzNTkgNDcuMjg5MDYyIEwgMTEuMDkzNzUgNyB6IE0gMTguOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMTggMTEgTCAxOCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMjAgNDQgTCAyMCAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMTguOTg0Mzc1IDkuOTg2MzI4MSB6IE0gMjQuOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjQgMTEgTCAyNCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMjYgNDQgTCAyNiAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjQuOTg0Mzc1IDkuOTg2MzI4MSB6IE0gMzAuOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzAgMTEgTCAzMCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMzIgNDQgTCAzMiAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzAuOTg0Mzc1IDkuOTg2MzI4MSB6Ij48L3BhdGg+PC9zdmc+" />
+
+                    <img id="sticker1" class="stickers" src="images/ST1.png" />
+                    <img id="sticker2" class="stickers" src="images/ST2.png" />
+                    <img id="sticker3" class="stickers" src="images/ST3.png" />
+                    <img id="sticker4" class="stickers" src="images/ST4.png" />
+                    <img id="sticker5" class="stickers" src="images/ST5.png" />
+                    <img id="sticker6" class="stickers" src="images/ST6.png" />
+                    <img id="sticker7" class="stickers" src="images/ST7.png" />
+                    <img id="sticker8" class="stickers" src="images/ST8.png" />
+                </div>
+
+                <button type="button" class="collapsible">הוספת תמונות</button>
+                <div id="imageProp" class="content">
+                    <input id="deleteImage" class="deleteImageClass" type="image" value="delete image" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA1MCA1MCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDIxIDAgQyAxOS4zNTQ1NDUgMCAxOCAxLjM1NDU0NTUgMTggMyBMIDE4IDUgTCAxMC4xNTYyNSA1IEEgMS4wMDAxIDEuMDAwMSAwIDAgMCA5LjgzNzg5MDYgNSBMIDggNSBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgOCA3IEwgOS4wODU5Mzc1IDcgTCAxMi43MDUwNzggNDcuNSBMIDEyLjcwNzAzMSA0Ny41MDk3NjYgQyAxMi44NTcyNjIgNDguODYyMjMyIDEzLjk4MTg3MiA1MCAxNS40MDAzOTEgNTAgTCAzNC41OTk2MDkgNTAgQyAzNi4wMTgxMjggNTAgMzcuMTQyNjkxIDQ4Ljg2MjI2NiAzNy4yOTI5NjkgNDcuNTA5NzY2IEwgMzcuMjk0OTIyIDQ3LjUgTCA0MC45MTQwNjIgNyBMIDQyIDcgQSAxLjAwMDEgMS4wMDAxIDAgMSAwIDQyIDUgTCA0MC4xNzM4MjggNSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzkuODQxNzk3IDUgTCAzMiA1IEwgMzIgMyBDIDMyIDEuMzU0NTQ1NSAzMC42NDU0NTUgMCAyOSAwIEwgMjEgMCB6IE0gMjEgMiBMIDI5IDIgQyAyOS41NTQ1NDUgMiAzMCAyLjQ0NTQ1NDUgMzAgMyBMIDMwIDUgTCAyMCA1IEwgMjAgMyBDIDIwIDIuNDQ1NDU0NSAyMC40NDU0NTUgMiAyMSAyIHogTSAxMS4wOTM3NSA3IEwgMTguODMyMDMxIDcgQSAxLjAwMDEgMS4wMDAxIDAgMCAwIDE5LjE1ODIwMyA3IEwgMzAuODMyMDMxIDcgQSAxLjAwMDEgMS4wMDAxIDAgMCAwIDMxLjE1ODIwMyA3IEwgMzguOTA2MjUgNyBMIDM1LjMwNjY0MSA0Ny4yODkwNjIgQyAzNS4yNTY5MTggNDcuNzM2NTYzIDM0Ljk4MTA5MSA0OCAzNC41OTk2MDkgNDggTCAxNS40MDAzOTEgNDggQyAxNS4wMTg5MDkgNDggMTQuNzQzMDgyIDQ3LjczNjU2MyAxNC42OTMzNTkgNDcuMjg5MDYyIEwgMTEuMDkzNzUgNyB6IE0gMTguOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMTggMTEgTCAxOCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMjAgNDQgTCAyMCAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMTguOTg0Mzc1IDkuOTg2MzI4MSB6IE0gMjQuOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjQgMTEgTCAyNCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMjYgNDQgTCAyNiAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjQuOTg0Mzc1IDkuOTg2MzI4MSB6IE0gMzAuOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzAgMTEgTCAzMCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMzIgNDQgTCAzMiAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzAuOTg0Mzc1IDkuOTg2MzI4MSB6Ij48L3BhdGg+PC9zdmc+" />
+                    <!-- כפתור להעלאת התמונה לעריכה -->
+                    <label id="UploadFileLBL" style="padding:3px; display:block;width: fit-content;">
+                        <input type="file" id="file"  />
+                        להעלות תמונה
+                    </label>
+                   
+                    <BR />
+                </div>
+                <button type="button" class="collapsible">רקעים</button>
+                <div id="BackgroundProp" class="content">
+                    צבע רקע:
+                    <input id="BcakgroundColor" type="color" name="favcolor" value="#000000">
+                    <BR />
+                    <img id="bg1" src="images/BG1.png" />
+                    <img id="bg2" src="images/BG2.png" />
+                    <img id="bg3" src="images/BG3.png" />
+                    <img id="bg4" src="images/BG4.png" />
+                    <img id="bg5" src="images/BG5.png" />
+                    <img id="bg6" src="images/BG6.png" />
+                    <img id="bg7" src="images/BG7.png" />
+                    <img id="bg8" src="images/BG8.png" />
+
+                    <img id="bg9" src="images/noBG.png" />
+                </div>
+
+
+            </div>
+            <div>
+                <div style="direction:rtl">
+                    <div id="cardCanvas">
+                        <!-- דיב להצגת התמונה -->
+
+                        <div id="image-container">
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- כפתור להורדת התמונה -->
+                <div id="buttonDiv">
+                    <input id="downloadBTN" type="button" value="להורדה" />
+                    <!--<a id="downloadBTN" href="#">הורידו את ה- MEME</a>-->
+                    <br />
+                    <!--<input id="btnDeleteTXT" type="button" value="עריכה לאחר הורדה" />-->
+                </div>
+            </div>
+            
+        </div>
+
+
+    </div>
+</body>
+</html>

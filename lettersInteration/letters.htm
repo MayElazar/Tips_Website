@@ -1,0 +1,138 @@
+﻿<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>מחולל מכתבים - טיפס</title>
+    <meta name="description" content="כלי ליצירת מכתבים- כלי מתוך האתר טיפיס (Tips), אתר עבור רכזי התנדבות. האתר מכיל טיפים בנושא ליווי והוקרת מתנדבים באופן פרונטלי ווירטואלי. כלי המכתבים מחולל מכתב באופן אוטמטי על פי דרישת הרכז. " />
+    <meta name="keywords" content="מכתבים, תודה, הוקרה, מתנדבים, רכזים, משפחות, מנהלים, חגים, מכתב, letter, manager, volenteer, tool, thanks, family, מחולל מכתבים" />
+    <meta name="author" content="final project - Hit Holon - Ori Allon and May Elazar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- CSS -->
+    <link href="Styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/myStyle.css" rel="stylesheet" type="text/css" />
+
+    <!-- Scripts -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script src="jScripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="jScripts/letters.js"></script>
+
+    <script src="https://www.jqueryscript.net/demo/Export-Html-To-Word-Document-With-Images-Using-jQuery-Word-Export-Plugin/FileSaver.js"></script>
+    <script src="https://www.jqueryscript.net/demo/Export-Html-To-Word-Document-With-Images-Using-jQuery-Word-Export-Plugin/jquery.wordexport.js"></script>
+</head>
+
+<body dir="rtl">
+    <div id="container">
+
+
+
+
+        <div style="width:90%">
+            <div id="eventBTN">
+                <section>
+                    <div id="chooseLetterAd" class="collapsible active"><h3>שלב ראשון - <b>בוחרים</b> את מטרת המכתב.</h3></div>
+                    <div id="Proporties" class="content">
+
+                        <div id="firstBtnDiv">
+                            <button id="lettetBoss" class="BTN letters">
+                                <img id="lettetBossIMG" class="BTNimg" src="pics/letterBossClose.png" />
+
+                                <span>מכתב לבוס/ית בעבודה</span>
+                            </button>
+                            <button id="lettetToVol" class="BTN letters">
+                                <img id="lettetToVolIMG" class="BTNimg" src="pics/letterThanksClose.png" />
+                                <span> מכתב תודה רשמי למתנדב/ת</span>
+
+                            </button>
+                        </div>
+                        <div id="secondBtnDiv">
+                            <button id="lettetHoliday" class="BTN letters">
+                                <img id="lettetHolidayIMG" class="BTNimg" src="pics/letterHolidayClose.png" />
+                                <span>מכתב לחגים</span>
+
+                            </button>
+                            <button id="lettetvolFam" class="BTN letters">
+                                <img id="lettetvolFamIMG" class="BTNimg" src="pics/letterFamilyClose.png" />
+
+                                <span>מכתב למשפחת המתנדב/ת</span>
+
+
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="displayDiv">
+                <!--<div style="width: 50%;">-->
+                    <section class="WarrperSec">
+                        <div  class="collapsible lastStep"><h3>שלב שני - <b>ממלאים</b> את הפרטים.</h3></div>
+                        <div class="contectWarpper lastStepWarpper">
+                            <div >
+                                <h4 id="UserChoosen" style="font-size: x-large;"></h4>
+                                <form action="/" method="post">
+
+                                    <label class="hide" id="familyNameLBL" for="familyName">שם משפחת המתנדב: </label><input class="hide" id="familyName" type="text" placeholder="שם המשפחה" />
+                                    <label class="hide" id="toNameLBL" for="toName">למי המכתב: </label><input class="hide" id="toName" type="text" placeholder="למי המכתב?" />
+                                    <label class="hide" id="volNameLBL" for="volName">שם המתנדב/ת: </label><input class="hide" id="volName" type="text" placeholder="שם המתנדב/ת" />
+
+                                    <label class="hide" id="genderLBL">מין המתנדב/ת: </label>
+
+                                    <img class="hide" id="girlIMG" for="girl" src="pics/Queen.png" /> <input id="girl" class="hide" name="gender" type="radio" value="1" />
+                                    <img class="hide" id="boyIMG" for="boy" src="pics/KIng.png" />  <input id="boy" class="hide" name="gender" type="radio" value="2" />
+
+                                    <label class="hide" id="volDurationLBL" for="volDuration">משך ההתנדבות: </label><input class="hide" id="volDuration" type="text" placeholder="משך ההתנדבות בארגון" />
+
+                                    <label class="hide" id="volGoalLBL" for="volGoal">מטרת פרויקט ההתנדבות: </label><input class="hide" id="volGoal" type="text" placeholder="מטרת פרויקט ההתנדבות" />
+
+
+                                    <label class="hide" id="myNameLBL" for="myName">ממני: </label><input class="hide" id="myName" type="text" placeholder="השם שלי" />
+
+                                    <label class="hide" id="orgNameLBL" for="orgName">שם ארגון ההתנדבות: </label><input class="hide" id="orgName" type="text" placeholder="שם ארגון ההתנדבות" />
+
+                                    <input class="hide BTNstyle" id="createLetter" type="button" value="צור מכתב!" />
+                                    <p id="errorNote">אחד או יותר מהשדות חסרים. <br /> השלימו ונסו שוב.</p>
+
+
+                                </form>
+
+
+                            </div>
+
+       
+
+
+                        </div>
+                    </section>
+                <!--</div>-->
+
+
+                <!--***************-->
+                <section class="WarrperSec" >
+                    <div  class="collapsible  FinalStep"><h3>שלב שלישי ואחרון - <b>מורידים</b> את המכתב.</h3></div>
+                    <div class="contectWarpper FinalStepWarpper">
+                        <div id="letterContent">
+                            <P id="sideNote">** אתם יכולים לערוך את המכתב לפני ההורדה וגם אחריה</P>
+                            <div id="letterAreaDiv">
+                                <textarea id="letterArea" rows="10" cols="20" placeholder="המכתב יופיע כאן"></textarea>
+                            </div>
+
+                            <button id="downloadLetter" class="BTNstyle">
+                                <span>הורד מכתב!</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>

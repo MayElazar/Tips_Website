@@ -1,0 +1,492 @@
+﻿
+/*import Assistent Font*/
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+
+    /*-------------------------------------------------------*/
+::-webkit-scrollbar {
+    width: 8px;
+    direction: rtl;
+    /*height: 4px;*/
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B3AFB3;
+    border-radius: 30px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #B3AFB3;
+    }
+
+::-webkit-scrollbar-track {
+    background: #F0F0F0;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+
+
+body {
+    font-family: Assistant;
+    /*margin: 0 auto;*/
+    direction:ltr;
+}
+
+#container {
+    right: 2%;
+    /*margin: 0 auto;*/
+    margin-right: 19px;
+    direction:rtl;
+}
+
+h1{
+    /*font-size:28pt;*/
+    /*margin-right:19px;*/
+}
+
+h2 {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+p {
+    /*margin-top: 1.5%;*/
+    font-size: 14pt;
+}
+
+.contectWarpper {
+    /* display: flex; */
+    /* gap: 10px; */
+    box-shadow: rgb(0 0 0 / 7%) 0px 1px 10px 6px;
+    border-top: none;
+    background-color: white;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    justify-content: center;
+    /* width: 846px; */
+    height: 100%;
+}
+
+#eventBTN {
+    /*max-width: fit-content;*/
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+form {
+    /*width: 315px*/
+}
+
+
+input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+label {
+    display:block;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+.opacity{
+    opacity:0.5;
+}
+
+.notopacity {
+    opacity: 1;
+}
+
+input[type=radio]:checked {
+    border-bottom: solid 6px black;
+  
+}
+
+
+
+#boyIMG, #girlIMG {
+    width: 60px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+
+
+
+input[type=text] {
+    display: block;
+    font-family: Assistant;
+    /* border-bottom: solid 2px gray; */
+    border: none;
+    border-radius: 8px;
+    background-color: #F3F3F4;
+    height: 42px;
+    width: 90%;
+    margin-bottom: 6px;
+    font-size: 12pt;
+}
+
+    /*input[type=text]:focus {
+        border-bottom: solid 2px #3F4C9B;
+        background-color: white;
+    }*/
+
+    input[type=text]:hover, input[type=text]:focus {
+        border-bottom: solid 2px #E62B60;
+        outline: 0;
+      background-color: white;
+    }
+
+
+
+
+#Proporties {
+    /*width: 24vw;*/
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+#letterContent {
+    margin-left: 54px;
+    width: 100%;
+}
+
+#letterArea {
+    font-family: Assistant;
+    /* position: absolute; */
+    font-size: 13pt;
+    /* margin-right: 204px; */
+    width: 95%;
+    height: 400px;
+    /* max-width: fit-content;*/
+}
+
+
+    /*#letterArea::-webkit-scrollbar {
+        direction:rtl;
+    }
+
+    #letterArea::-webkit-scrollbar-track {
+        direction: rtl;
+    }*/
+    #displayDiv {
+    /*display: flex;
+    /*justify-content: space-between;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.WarrperSec{
+width:45%;
+}
+
+#letterType {
+    display: none;
+}
+
+#letterTypeLBL {
+    display: none;
+}
+
+#createLetter {
+    font-family: Assistant;
+     margin-top: 6px; 
+    /* margin-right: 45%; */
+    /* margin-bottom: 10px; */
+    font-size: 22px;
+    padding: 5px 15px;
+    float: left;
+    margin-left: 30px;
+     /*margin-bottom: 16px;*/
+}
+
+#errorNote {
+    color: red;
+    display: inline-block;
+}
+
+#downloadLetter {
+    /* margin-top: 10px; */
+    width: 127px;
+    /* height: fit-content; */
+    /* margin-right: 305px; */
+    font-size: 15pt;
+    margin-bottom: 16px;
+    float: left;
+    margin-left: 27px;
+}
+.collapsible {
+    background-color: #c9eaf9;
+    font-weight: 500;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    /*width: 859px;*/
+    border: none;
+    text-align: right;
+    outline: none;
+    font-size: 15px;
+    margin-top: 6px;
+    /* border-radius: 10px; */
+    /* margin-right: -26px; */
+    border-top-left-radius: 10px;
+    font-family: Assistant;
+    border-top-right-radius: 10px;
+    /*font-family: 12pt;*/
+    font-size: large;
+    /*width: 90%;*/
+}
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .collapsible:hover {
+        background-color: #b1d9ec;
+    }
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 5px 18px 5px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    font-family: Assistant;
+    font-family: 10pt;
+    box-shadow: 0px 1px 10px 6px rgb(0 0 0 / 7%);
+    border-top: none;
+    background-color: white;
+    /*width: 90%;*/
+}
+
+
+
+button {
+    font-family: Assistant;
+    /* margin-right: 0%; */
+    /* background-size: 250px 200px; */
+    /* background-repeat: no-repeat; */
+    background-color: transparent;
+    /* background-position-x: center; */
+    /* width: 250px; */
+    /* height: 200px; */
+    /* padding-top: 200px; */
+    border: none;
+    cursor: pointer;
+    /* margin-left: 70px; */
+    margin-top: 3%;
+    font-size: 18pt;
+    /* margin-bottom: 60px; */
+    display: inline-grid;
+}
+
+.BTN {
+    font-size: 13pt;
+    margin-left: 44px;
+}
+
+
+
+.BTNimg {
+    width: 160px;
+}
+
+.BTNstyle {
+    border: solid 3px #3F4C9B;
+    background-color: #3F4C9B;
+    color: white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    padding: 2px 12px 2px 12px
+}
+
+    .BTNstyle:hover {
+        border: solid 3px #354083;
+        background-color: #354083;
+        color: white;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+        padding: 2px 12px 2px 12px;
+        cursor: pointer;
+    }
+    .BTNstyle:active {
+        border: solid 3px #293265;
+        background-color: #293265;
+        color: white;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+        padding: 2px 12px 2px 12px
+    }
+
+/*.hidden {
+    display: none;
+}*/
+
+/*.visible {
+    display: inline;
+}*/
+/************************************************************************************************/
+
+@media  (max-width: 765px) {
+
+    .WarrperSec {
+        width: 100%;
+    }
+    p {
+        margin-top: 1.5%;
+        font-size: 14pt;
+    }
+
+
+    #letterArea {
+        font-family: Assistant;
+        /* position: absolute; */
+        font-size: 15pt;
+        /* margin-right: 204px; */
+        width: 90%;
+        height: 500px;
+        /* max-width: fit-content; */
+        margin: 0 auto;
+        margin-right: 5px
+    }
+
+    #displayDiv {
+       display:flex;
+       flex-direction:column;
+        margin-bottom: 10px;
+        font-size: 15pt;
+    }
+
+
+    #letterType {
+        display: none;
+    }
+
+    #letterTypeLBL {
+        display: none;
+    }
+
+    #createLetter {
+        font-family: Assistant;
+        margin-top: 17px;
+        /*margin-right: 45%;*/
+        margin-bottom: 10px;
+        font-size: 15pt;
+        padding: 5px 15px;
+    }
+
+    
+    #downloadLetter {
+        margin-top: 10px;
+        width: 140px;
+        height: fit-content;
+        margin-right: 0px;
+        float:none;
+    }
+
+
+
+
+  
+
+    #contectWarpper {
+        display: block;
+        gap: 10px;
+        box-shadow: rgb(0 0 0 / 7%) 0px 1px 10px 6px;
+        border-top: none;
+        background-color: white;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        padding-right: 10px;
+        justify-content: center;
+        width: 253px;
+    }
+
+    .BTNstyle {
+        border: solid 3px #3F4C9B;
+        background-color: #3F4C9B;
+        color: white;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+        padding: 2px 12px 2px 12px
+    }
+
+        .BTNstyle:hover {
+            border: solid 3px #354083;
+            background-color: #354083;
+            color: white;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+            padding: 2px 12px 2px 12px;
+            cursor: pointer;
+        }
+
+        .BTNstyle:active {
+            border: solid 3px #293265;
+            background-color: #293265;
+            color: white;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+            padding: 2px 12px 2px 12px
+        }
+    #errorNote {
+        width: 130px;
+        color: red;
+    }
+
+    input[type=text] {
+        display: block;
+        font-family: Assistant;
+        /* border-bottom: solid 2px gray; */
+        border: none;
+        border-radius: 8px;
+        background-color: #F3F3F4;
+        height: 42px;
+        width: 90%;
+        margin-bottom: 6px;
+        font-size: 12pt;
+    }
+    form {
+        width: 190px;
+    }
+    #createLetter {
+        font-family: Assistant;
+        margin-top: 6px;
+        /* margin-right: 45%; */
+        /* margin-bottom: 10px; */
+        font-size: 22px;
+        padding: 5px 15px;
+         float: right; 
+        /* margin-left: 116px; */
+        display: block;
+    }
+    #letterContent {
+         margin-left: 0px; 
+    }
+    
+    /*.hidden {
+        display: none;
+    }
+
+    .visible {
+        display: inline;
+    }*/
+}
+

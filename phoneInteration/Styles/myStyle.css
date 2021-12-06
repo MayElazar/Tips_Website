@@ -1,0 +1,906 @@
+﻿body {
+    margin: 0 auto;
+    max-width: fit-content;
+    font-family: Assistant;
+}
+
+/*הדיב של הטלפון כולו*/
+#phone {
+    background-image: url(../PhoneInterImG/iphone.png);
+    background-repeat: no-repeat;
+    height: 636px;
+    /* height: fit-content; */
+    /* background-position-x: center; */
+    position: fixed;
+    /* margin: 0 auto; */
+    /* max-width: fit-content; */
+    width: fit-content;
+    background-size: 319px 636px;
+    right: 0px;
+    left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+.opBTN:hover span {
+    background-color: white;
+    color: black;
+}
+/*הדיב של ההודעות*/
+#msg {
+    height: 283px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+    #msg::-webkit-scrollbar {
+        display: none;
+    }
+
+
+/*דיב אמצעי לסידור האלמנטים על מסך*/
+#spacing {
+    height: 70px;
+}
+
+/*דיב עליון למיקום שם המתנדבת*/
+#volenteerName {
+    /* height: 40px; */
+    width: 131px;
+    margin: 0 auto;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-top: 38px;
+    /* right: 170px; */
+    /* position: relative; */
+    align-self: center;
+}
+
+    /*שם המתנדבת*/
+    #volenteerName h2 {
+        font-family: Assistant;
+        font-size: 14pt;
+        text-align: center;
+        background-color: white;
+        font-weight: normal;
+    }
+
+
+/*דיב של הכפתורים*/
+#buttons {
+    border-radius: 2.14286rem;
+    max-height: fit-content;
+    /* background-color: #efe6dd; */
+    /* width: 302px; */
+    /* height: fit-content; */
+    position: absolute;
+    /* bottom: 3.42857rem; */
+    left: 0.42857rem;
+    /* right: 5.6rem;*/
+}
+
+/*כפתור סיום*/
+#endBTN {
+    width: 274px;
+    height: 50px;
+    margin: 20px;
+    position: relative;
+    /* right: 82px; */
+    background-color: #193083;
+    color: white;
+    font-family: Assistant;
+    font-size: larger;
+    display: block;
+    border-radius: 9px;
+    border-color: transparent;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+    #endBTN:active {
+        border-radius: 10px;
+        border-color: #6996c7;
+    }
+
+/*כללים לכלל הכפתורים*/
+button {
+    font-family: Assistant;
+    width: 282px;
+    height: 55px;
+    margin-left: 12px;
+    margin-right: 12px;
+    background-size: 318px 68px;
+    border: none;
+    position: sticky;
+    background-color: white;
+    font-size: larger;
+    text-align: right;
+    display: block;
+    border-radius: 49px;
+    margin-bottom: 10px;
+}
+
+    button:hover {
+        background-color: #965b93;
+        color: white;
+    }
+
+/*המספרים שעל הכפתורים*/
+.numSelector {
+    font-family: Assistant;
+    background-color: #965b93;
+    border: none;
+    border-radius: 100%;
+    padding: 6px 14px 6px 14px;
+    text-align: center;
+    color: white;
+}
+
+.numSelectorOnHover {
+    background-color: white;
+    color: black;
+}
+/*הטקסט שעל הכפתורים*/
+.optionTXTclass {
+    font-family: Assistant;
+    text-align: right;
+    position: relative;
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    font-size: 14pt;
+}
+
+button:active {
+    border-color: transparent;
+}
+
+/*כפתור ראשון*/
+#op1BTN {
+    cursor: pointer;
+}
+
+/*כפתור שני*/
+#op2BTN {
+    cursor: pointer;
+}
+/*כפתור שלישי*/
+#op3BTN {
+    cursor: pointer;
+}
+/*--------------------------------הודעות מנהלת-------------------------------*/
+
+/*כללים לדיב הגדול- הודעות מנהלת*/
+.firstMsgDiv {
+    width: 319px;
+    display: flex;
+    position: relative;
+    /* right: 87px;*/
+}
+
+
+
+/*האייקון של המנהלת*/
+.managerIcon {
+    background-image: url('../PhoneInterImG/mngIcon.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 45px 45px;
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+}
+/*הדיב של הצ'ופצ'יק*/
+.spanDiv {
+    position: relative;
+    top: 14px;
+}
+
+
+/*הצ'ופצ'יק*/
+.spanMsg {
+    background-image: url('../PhoneInterImG/Asset 14.png');
+    width: 10px;
+    height: 10px;
+    background-size: contain;
+    position: absolute;
+    transform: rotate( 359deg );
+    transform: scaleX(-1);
+}
+/*הדיב של הטקסט*/
+.InnerMsgDiv {
+    position: relative;
+    background-color: #6bc4cb;
+    border: none;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 6px;
+    top: 14px;
+    right: 4px;
+    width: 193px;
+    max-width: fit-content;
+}
+
+/*--------------------------------הודעות מתנדבת-------------------------------*/
+
+/*הדיב הגדול- הודעות מתנדבת*/
+.voLFirstMsgDiv {
+    width: 319px;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    /* align-items: flex-end; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* right: 0; */
+    position: relative;
+}
+
+
+/*אייקון של מתנדבת*/
+.volIcon {
+    background-image: url('../PhoneInterImG/volicon2.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 45px 45px;
+    height: 45px;
+    width: 45px;
+    margin-left: 10px;
+}
+
+/*הדיב של הצ'ופצ'יק*/
+.VolspanDiv {
+    position: relative;
+    top: 14px;
+}
+/*הצ'ופצי'ק*/
+.VolspanSecond {
+    background-image: url('../PhoneInterImG/Asset 15.png');
+    width: 10px;
+    height: 10px;
+    background-size: contain;
+    position: absolute;
+    transform: rotate( 359deg );
+    /* transform: scaleX(-1); */
+    right: -10px;
+}
+
+/*הדיב של הטקסט*/
+.VolInnerDiv {
+    position: relative;
+    background-color: #d682b3;
+    border: none;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 6px;
+    top: 14px;
+    width: 193px;
+    max-width: fit-content;
+    left: 5px;
+}
+
+
+/*--------------------------------סיום ופידבק-------------------------------*/
+
+/*מסך אפור- סיום*/
+#grayBG {
+    background-color: rgba(128, 128, 128,0.5);
+    top: 74px;
+    right: 9px;
+    z-index: 1;
+    position: absolute;
+    margin: 0 auto;
+    height: 88%;
+    width: 302px;
+    /* right: 36px; */
+    /* border-radius: 55px; */
+    border-bottom-left-radius: 42px;
+    border-bottom-right-radius: 42px;
+}
+
+
+/*הדיב של שאלת הסיום*/
+#finalQ {
+    display: block;
+    background-color: white;
+    /* border: black solid 1px; */
+    border-radius: 10px;
+    padding: 10px;
+    width: 277px;
+    /* right: 6px; */
+    /* top: -40px; */
+    margin: 0 auto;
+    margin-top: -41px;
+    z-index: 2;
+    /* position: absolute; */
+    height: 87px;
+    -webkit-animation: finalSlide-bottom 0.7s ease-out both;
+    animation: finalSlide-bottom 0.7s ease-out both;
+}
+
+@-webkit-keyframes finalSlide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px);
+    }
+}
+
+@keyframes finalSlide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px);
+    }
+}
+
+/*הטקסט של שאלת הסיום*/
+#finalQ span {
+    display: block;
+}
+
+/*כפתור תשובה- כן*/
+#yesAns {
+    background-color: #6bc4cb;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    width: 80px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+    #yesAns:hover {
+        background-color: #1abecb;
+    }
+
+/*כפתור תשובה- לא*/
+#noAns {
+    background-color: #d682b3;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    width: 80px;
+    border-radius: 5px;
+    /*margin-left: 20px;*/
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+    #noAns:hover {
+        background-color: #d55ea4;
+    }
+
+/*הדיב של הפידבק*/
+#feedback {
+    display: block;
+    background-color: white;
+    width: 279px;
+    /* border: solid black 1px; */
+    /* position: absolute; */
+    /* top: -45px; */
+    /* right: 5px; */
+    margin: 0 auto;
+    margin-top: -46px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-animation: slide-bottom 0.7s ease-out both;
+    animation: slide-bottom 0.7s ease-out both;
+}
+
+@-webkit-keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(45px);
+        transform: translateY(45px);
+    }
+}
+
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(45px);
+        transform: translateY(45px);
+    }
+}
+
+
+/*כפתור ודיב של כפתור אתחול*/
+.replay {
+    z-index: 5;
+    position: relative;
+    width: 105px;
+    right: 51px;
+    top: -70px;
+    cursor: pointer;
+}
+/***************************************************************************************************/
+
+@media (max-width: 765px) {
+    body {
+        margin: 0 auto;
+        max-width: fit-content;
+        font-family: Assistant;
+    }
+
+    /*הדיב של הטלפון כולו*/
+    #phone {
+        background-image: url(../PhoneInterImG/iphone.png);
+        background-repeat: no-repeat;
+        height: 100%;
+        /* height: fit-content; */
+        /* background-position-x: center; */
+        position: fixed;
+        /* margin: 0 auto; */
+        /* max-width: fit-content; */
+        width: 100%;
+        background-size: 100% 100%;
+        right: 0px;
+        left: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        bottom: 0px;
+        top: 0px;
+    }
+
+    /*הדיב של ההודעות*/
+    #msg {
+        /* margin-top: 26px; */
+        margin-bottom: 5px;
+        height: 46%;
+        overflow-y: scroll;
+        width: 100%;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+        #msg::-webkit-scrollbar {
+            display: none;
+        }
+
+
+    /*דיב אמצעי לסידור האלמנטים על מסך*/
+    #spacing {
+        height: 7%;
+    }
+
+    /*דיב עליון למיקום שם המתנדבת*/
+    #volenteerName {
+        /* height: 40px; */
+       
+        width: 90%;
+        margin: 0 auto;
+        /* align-items: center; */
+        /* justify-content: center; */
+        margin-top: 38px;
+        /* right: 170px; */
+        /* position: relative; */
+        align-self: center;
+    }
+
+        /*שם המתנדבת*/
+        #volenteerName h2 {
+            font-family: Assistant;
+            font-size: revert;
+            text-align: center;
+            background-color: white;
+            font-weight: normal;
+            margin: 0;
+           /*  margin-top: 55px;
+            width: 100%;*/
+        }
+
+
+    /*דיב של הכפתורים*/
+            #buttons {
+        border-radius: 2.14286rem;
+        min-height: 30%;
+        /* background-color: #efe6dd; */
+        width: 95%;
+        /* height: fit-content; */
+        position: absolute;
+        /* bottom: 3.42857rem; */
+        left: 0.42857rem;
+        /* right: 5.6rem; 
+        margin-top: 15px;*/
+        display: grid;
+        align-content: space-evenly;
+    }
+
+    /*כפתור סיום*/
+    #endBTN {
+        width: 90%;
+        height: 50px;
+        margin: 0 auto;
+        margin-top: 20px;
+        /* margin: 20px; */
+        /* margin: 0 auto; */
+        position: relative;
+        /* right: 82px; */
+        background-color: #193083;
+        color: white;
+        font-family: Assistant;
+        font-size: larger;
+        display: block;
+        border-radius: 9px;
+        border-color: transparent;
+        text-align: center;
+        font-size: x-large;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+
+        #endBTN:active {
+            border-radius: 10px;
+            border-color: #6996c7;
+        }
+
+    /*כללים לכלל הכפתורים*/
+    button {
+        font-family: Assistant;
+        width: 90%;
+        height: 55px;
+        margin-left: 12px;
+        margin-right: 12px;
+        background-size: 318px 68px;
+        border: none;
+        position: sticky;
+        background-color: white;
+        font-size: 11pt;
+        text-align: right;
+        display: block;
+        border-radius: 49px;
+        margin-bottom: 10px;
+    }
+
+    /*button:hover {
+            background-color: white;
+            color: black;
+        }*/
+
+    /*button:hover button:active {
+                background-color: #965b93;
+                color: white;
+            }*/
+    /*המספרים שעל הכפתורים*/
+    .numSelector {
+        font-family: Assistant;
+        background-color: #965b93;
+        border: none;
+        border-radius: 100%;
+        padding: 5px 11px 5px 11px;
+        text-align: center;
+        color: white;
+    }
+
+    .numSelectorOnHover {
+        background-color: #965b93;
+        color: white;
+    }
+    /*הטקסט שעל הכפתורים*/
+    .optionTXTclass {
+        font-family: Assistant;
+        text-align: right;
+        position: relative;
+        z-index: 2;
+        position: relative;
+        display: inline-block;
+        z-index: 2;
+        font-size: 11pt;
+    }
+
+    button:active {
+        border-color: transparent;
+    }
+
+    /*כפתור ראשון*/
+    #op1BTN {
+        cursor: pointer;
+    }
+
+    /*כפתור שני*/
+    #op2BTN {
+        cursor: pointer;
+    }
+    /*כפתור שלישי*/
+    #op3BTN {
+        cursor: pointer;
+    }
+    /*--------------------------------הודעות מנהלת-------------------------------*/
+
+    /*כללים לדיב הגדול- הודעות מנהלת*/
+    .firstMsgDiv {
+        width: 95%;
+        display: flex;
+        position: relative;
+        /* right: 87px;*/
+    }
+
+
+
+    /*האייקון של המנהלת*/
+    .managerIcon {
+        background-image: url('../PhoneInterImG/mngIcon.png');
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: 45px 45px;
+        height: 45px;
+        width: 45px;
+        margin-right: 10px;
+    }
+    /*הדיב של הצ'ופצ'יק*/
+    .spanDiv {
+        position: relative;
+        top: 14px;
+    }
+
+
+    /*הצ'ופצ'יק*/
+    .spanMsg {
+        background-image: url('../PhoneInterImG/Asset 14.png');
+        width: 10px;
+        height: 10px;
+        background-size: contain;
+        position: absolute;
+        transform: rotate( 359deg );
+        transform: scaleX(-1);
+    }
+    /*הדיב של הטקסט*/
+    .InnerMsgDiv {
+        position: relative;
+        background-color: #6bc4cb;
+        border: none;
+        border-radius: 10px;
+        height: fit-content;
+        padding: 6px;
+        top: 14px;
+        right: 4px;
+        width: 70%;
+        max-width: fit-content;
+    }
+
+    /*--------------------------------הודעות מתנדבת-------------------------------*/
+
+    /*הדיב הגדול- הודעות מתנדבת*/
+    .voLFirstMsgDiv {
+        width: 95%;
+        display: flex;
+        /* justify-content: space-between; */
+        justify-content: flex-end;
+        /* align-items: flex-end; */
+        margin-top: 15px;
+        margin-bottom: 15px;
+        /* right: 0; */
+        position: relative;
+    }
+
+
+    /*אייקון של מתנדבת*/
+    .volIcon {
+        background-image: url('../PhoneInterImG/volicon2.png');
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: 45px 45px;
+        height: 45px;
+        width: 45px;
+        margin-left: 10px;
+    }
+
+    /*הדיב של הצ'ופצ'יק*/
+    .VolspanDiv {
+        position: relative;
+        top: 14px;
+    }
+    /*הצ'ופצי'ק*/
+    .VolspanSecond {
+        background-image: url('../PhoneInterImG/Asset 15.png');
+        width: 10px;
+        height: 10px;
+        background-size: contain;
+        position: absolute;
+        transform: rotate( 359deg );
+        /* transform: scaleX(-1); */
+        right: -10px;
+    }
+
+    /*הדיב של הטקסט*/
+    .VolInnerDiv 
+    {
+        position: relative;
+        background-color: #d682b3;
+        border: none;
+        border-radius: 10px;
+        height: fit-content;
+        padding: 6px;
+        top: 14px;
+        width: 70%;
+        max-width: fit-content;
+        left: 5px;
+    }
+
+
+    /*--------------------------------סיום ופידבק-------------------------------*/
+
+    /*מסך אפור- סיום*/
+    #grayBG {
+        background-color: rgba(128, 128, 128,0.5);
+        top: 11%;
+        right: 9px;
+        z-index: 1;
+        position: absolute;
+        margin: 0 auto;
+        height: 88%;
+        width: 95%;
+        /* right: 36px; */
+        /* border-radius: 55px; */
+        border-bottom-left-radius: 42px;
+        border-bottom-right-radius: 42px;
+    }
+
+
+    /*הדיב של שאלת הסיום*/
+    #finalQ {
+        width: 93%;
+        display: block;
+        background-color: white;
+        /* border: black solid 1px; */
+        border-radius: 10px;
+        padding: 10px;
+       /* width: 277px;
+         right: 6px; */
+        /* top: -40px; */
+        margin: 0 auto;
+        margin-top: -41px;
+        z-index: 2;
+        /* position: absolute; */
+        height: 87px;
+        -webkit-animation: finalSlide-bottom 0.7s ease-out both;
+        animation: finalSlide-bottom 0.7s ease-out both;
+    }
+
+    @-webkit-keyframes finalSlide-bottom {
+        0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+        }
+    }
+
+    @keyframes finalSlide-bottom {
+        0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+        }
+    }
+
+    /*הטקסט של שאלת הסיום*/
+    #finalQ span {
+        display: block;
+    }
+
+    /*כפתור תשובה- כן*/
+    #yesAns {
+        background-color: #6bc4cb;
+        border: none;
+        padding: 5px 10px 5px 10px;
+        width: 80px;
+        border-radius: 5px;
+        margin-left: 20px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+        #yesAns:hover {
+            background-color: #1abecb;
+        }
+
+    /*כפתור תשובה- לא*/
+    #noAns {
+        background-color: #d682b3;
+        border: none;
+        padding: 5px 10px 5px 10px;
+        width: 80px;
+        border-radius: 5px;
+        /*margin-left: 20px;*/
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+        #noAns:hover {
+            background-color: #d55ea4;
+        }
+
+    /*הדיב של הפידבק*/
+    #feedback {
+        display: block;
+        background-color: white;
+        width: 93%;
+        /* border: solid black 1px; */
+        /* position: absolute; */
+        /* top: -45px; */
+        /* right: 5px; */
+        margin: 0 auto;
+        margin-top: -46px;
+        padding: 10px;
+        border-radius: 10px;
+        -webkit-animation: slide-bottom 0.7s ease-out both;
+        animation: slide-bottom 0.7s ease-out both;
+    }
+
+    @-webkit-keyframes slide-bottom {
+        0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            -webkit-transform: translateY(45px);
+            transform: translateY(45px);
+        }
+    }
+
+    @keyframes slide-bottom {
+        0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            -webkit-transform: translateY(45px);
+            transform: translateY(45px);
+        }
+    }
+
+
+    /*כפתור ודיב של כפתור אתחול*/
+    .replay {
+        z-index: 5;
+        position: relative;
+        width: 105px;
+        right: 26px;
+        top: -70px;
+        cursor: pointer;
+    }
+
+
+    .replayDiv {
+        height: 100%;
+        position: relative;
+        top: 43%;
+        margin: 0 auto;
+        right: 26%;
+    }
+
+
+}

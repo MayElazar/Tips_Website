@@ -1,0 +1,371 @@
+﻿<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>הפרופיל שלי - Tips</title>
+    <link href="img/heart.png" rel="icon" />
+
+
+    <meta name="description" content="אתר טיפס (Tips), דף פרופיל - אתר המכיל טיפים עבור רכזי התנדבות בנושאי ליווי והוקרת מתנדבים באופן פרונטלי ווירטואלי. האת מכיל טיפים, וכלים. האתר מדמה רשת חברתית עבור הרכזים" />
+    <meta name="keywords" content="profile, manager, volenteer, escort, thanks, recognition, הוקרה, תודה, ליווי, פרופיל, מתנדבים, מנהלים, רכזים, ניהול, קורונה, וירטואלי, פרונטלי, טיפים" />
+    <meta name="author" content="final project - Hit Holon - Ori Allon and May Elazar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.0/dist/aos.css" rel="stylesheet" />
+
+
+
+
+    <!-- Scripts -->
+
+
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <script src="jScripts/JavaScript.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+
+    <script type="text/javascript" src="    https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
+
+</head>
+<body dir="rtl">
+    <!-- preLoder Animation -->
+    <div class="se-pre-con"></div>
+
+
+
+    <article>
+
+
+
+        <div id="Profilecontainer" onload="LoadTip()">
+            <!--  nav -->
+            <div id="menuBG" class="overlay" style="display: block;z-index: 999;pointer-events: none;"> </div>
+
+            <header id="header">
+                <nav>
+                    <ul style="width:fit-content">
+
+                        <li id="TipsLI">
+                            <h1><a href="index.html"><img id="logo" src="./img/TIPS_Logo.png" /></a></h1>
+                        </li>
+                    </ul>
+                    <!--desktop menu-->
+                    <div class="navDesk">
+                        <ul style="margin-left: 20px;width: fit-content;float: left;">
+                            <li id="profilePic">
+                                <div class="profileContainer">
+                                    <a class="profileA">
+                                        <img class="ProfilePicImg" src="img/ProfilePic1.png" />
+                                        <!--<span class="tooltiptext">עוד לא נרשמת? <br /> <a style="color:white;font-size:small">להרשמה עברו עלי</a></span>-->
+                                        <p id="ProfileTag">הפרופיל שלי</p>
+                                        <p id="userNameP"></p>
+
+                                    </a>
+                                </div>
+
+                            </li>
+                        </ul>
+                        <ul style="width: fit-content;float: left;display: inline-flex;">
+                            <li class="loginToSystem">
+
+                                <button class="regLink">הצטרפות</button>
+
+                            </li>
+                            <li class="loginToSystem">
+                                <button class="logInLink">כניסה</button>
+
+
+                            </li>
+                            <li class="exitFromSystem">
+                                <button class="UserExit">התנתקות</button>
+
+
+                            </li>
+                            <li>
+                                <a href="TipsEditor.aspx">
+                                    <div class="editorLink">
+                                        <span style="margin: 0 auto; position: relative; top: 3px;">כניסה לעורך</span>
+
+                                    </div>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!--mobile menu-->
+                    <div class="navMobile" id="menuToggle">
+
+                        <input type="checkbox" id="toggleMenuCB" />
+
+
+                        <span class="HamMenu"></span>
+                        <span class="HamMenu"></span>
+                        <span class="HamMenu"></span>
+
+
+
+
+                        <ul style="width: fit-content;float: left;" id="menu">
+
+                            <li id="profilePic" class="MobileMenuLI">
+                                <div class="profileContainer">
+                                    <a class="profileA">
+                                        <!--<img class="ProfilePicImg" src="img/ProfilePic1.png" />-->
+                                        <!--<span class="tooltiptext">עוד לא נרשמת? <br /> <a style="color:white;font-size:small">להרשמה עברו עלי</a></span>-->
+                                        <p id="ProfileTagm">הפרופיל שלי</p>
+                                        <p id="userNamePm"></p>
+
+                                    </a>
+                                </div>
+
+                            </li>
+                            <li>
+                                <a href="TipsEditor.aspx">
+                                    <div class=" MenuLinkMobile editorLink">
+                                        <span style="margin: 0 auto; position: relative; top: 3px;">כניסה לעורך</span>
+
+                                    </div>
+                                </a>
+
+                            </li>
+
+                            <li class="loginToSystem MobileMenuLI">
+                                <button class=" MenuLinkMobile logInLink">כניסה</button>
+
+
+                            </li>
+                            <li class="loginToSystem MobileMenuLI">
+
+                                <button class="MenuLinkMobile regLink">הצטרפות</button>
+
+                            </li>
+
+                            <li class="exitFromSystem MobileMenuLI">
+                                <button class="MenuLinkMobile UserExit">התנתקות</button>
+
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </nav>
+            </header>
+            <!-- END nav -->
+            <!--סמנטיקה?!??!?!? -->
+
+            <div id="popupTips" class="popupClose">
+                <div class="modal">
+
+                    <div class="text-box" style="margin-top: 5%;">
+
+                        <section id="SecPopupWarp" style="">
+                            <div class="close-btn ExitTip mobileExitPopup">
+                                <img class="ion-close" src="img/ExitTip.png" />
+                            </div>
+                            <div id="containerPopup">
+                                <div class="desktopOption">
+                                    <div class="close-btn ExitTip">
+                                        <img class="ion-close" src="img/ExitTip.png" />
+                                    </div>
+                                    <div class="aroowWarpper">
+                                        <div class="nextTipArrowR">
+                                            <img class="nextTip" id="Rnext" src="img/nextArrow.png" />
+                                        </div>
+                                        <div class="NextPrev">הקודם</div>
+                                    </div>
+                                </div>
+                                <div id="tipPopup">
+
+                                    <div id="innerTipContent">
+                                        <h2 class="headlinePopup"></h2>
+                                        <div id="PDiv">
+                                            <p id="taglineTipID" class="taglineTip"></p>
+                                        </div>
+                                        <p id="HashTagPopup"></p>
+                                        <div id="socialAndLike"></div>
+                                    </div>
+
+                                    <div id="TipsPOPInnerImageDIV"> <!--<img id="tipImg" />--></div>
+
+                                </div>
+                                <div class="aroowWarpper">
+                                    <div class="nextTipArrowL">
+                                        <img class="nextTip" id="Lnext" src="img/nextArrow.png" />
+                                    </div>
+                                    <div class="NextPrev">הבא</div>
+                                </div>
+                            </div>
+                            <aside id="Aside" style="opacity:0">
+                                <h3>טיפים שבטוח תאהבו:</h3>
+                                <div id="morTipsCon">
+                                    <div id="moreTips"></div>
+                                </div>
+                            </aside>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!--overlay-register-->
+            <div id="registerPopup" class="popupClose">
+                <div class="modal-register">
+                    <div class="close-reg">
+                        <img class="notNowBTN" src="img/shareExit.png" />
+                    </div>
+                    <div class="text-box">
+                        <div id="newOrOldUserBTN">
+                            <div class="BtninnerContainer">
+                                <button id="newUserBTN">חדשים פה?</button>
+
+                            </div>
+                            <div class="BtninnerContainer">
+                                <button id="olduserBTN">כבר נרשמת?</button>
+
+                            </div>
+                        </div>
+                        <section id="comebackSection">
+                            <h2>תודה שחזרת!</h2>
+                            <p>בשבילנו זו הוקרה גדולה</p>
+
+                            <form>
+                                <label for="userEmailTXT"></label>
+                                אימייל:<input class="TXTinput" id="userEmailTXT" type="text" />
+
+
+
+
+
+                            </form>
+                            <p id="NoEmailFoundAtSystem"></p>
+
+                            <div id="formInputConReg">
+                                <div>
+                                    <input class="registerBTN conffetiBTN" id="loginBTN" type="button" value="יאללה בואו נוקיר מתנדבים" />
+                                </div>
+                                <div>
+                                    <input class="notNowBTN registerBTN" id="maybeLaterBTN" type="button" value="תודה, אולי בפעם אחרת" />
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <section id="thanksForComingSection">
+
+                            <h2 class="">היוש! איזה כייף שבאת ללמוד איך להוקיר מתנדבים</h2>
+                            <p class="">נשמח להציע לך טיפים שמותאמים אישית לך. <br /> לצורך כך נא מלאו את הפרטים:</p>
+
+                            <form>
+                                <label for="userFirstNameTXT"> </label>
+                                <p>שם פרטי:<span>*</span></p><input class="TXTinput" id="userFirstNameTXT" type="text" />
+
+
+                                <label for="userLastNameTXT"> </label>
+                                <p>שם משפחה:<span>*</span></p> <input class="TXTinput" id="userLastNameTXT" type="text" />
+
+                                <label for="userEmailTXT"> </label>
+                                <p> אימייל:<span>*</span></p><input class="TXTinput" id="userEmailTXTreg" type="text" />
+
+                                <p id="dontSendJankmailP">לא שולחים דואר זבל, מבטיחים:)</p>
+
+                                <p style="margin-bottom: 10px;">איך נפנה אליך?</p>
+                                <div>
+                                    <label for="maleRB">
+
+                                        <input id="maleRB" type="radio" name="gender" value="זכר">
+                                        <img id="genderIMGmale" class="genderIMG" src="img/genderM.png">
+                                    </label>
+                                    <label for="femaleRB">
+
+                                        <input id="femaleRB" type="radio" name="gender" value="נקבה">
+                                        <img id="genderIMGfemale" class="genderIMG" src="img/genderF.png">
+                                    </label>
+                                </div>
+
+                            </form>
+
+                            <p id="validateInput"></p>
+                            <div id="formInputCon">
+                                <div>
+                                    <input class="registerBTN conffetiBTN" id="registerBTN" type="button" value="נרשמתי! בואו נתחיל" />
+                                </div>
+                                <div>
+                                    <input class="registerBTN notNowBTN" id="noThanksBTN" type="button" value="תודה, אולי בפעם אחרת" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!--*************אודות -->
+            <div id="about" class="popupClose">
+                <div class="modal-about">
+                    <div style="direction:rtl">
+                        <div class="close-about">
+                            <img class="close-about" src="img/shareExit.png" />
+                        </div>
+                        <div class="text-box">
+
+                            <section id="comebackSection">
+                                <h2 style="margin-top: 36px; margin-bottom:30px">מי אנחנו?</h2>
+                                <div class="imgPlusTxtAbout">
+                                    <img src="img/TIPS_Logo.png" style="width: 112px;" />
+                                    <p>אתר המכיל טיפים עבור רכזים בנושאי הוקרה וליווי מתנדבים</p>
+                                </div>
+                                <div style="margin-bottom:40px">
+                                    <p>פרוייקט גמר, תשפ"א</p>
+                                    <p>פרויקט זה נעשה במסגרת תואר ראשון<br> <a class="Aabout" target="”_blank”" href="https://www.hit.ac.il/telem/overview">בפקולטה לטכנולוגיות למידה</a> ובשיתוף פעולה עם<a class="Aabout" target="”_blank”" href="http://www.ivolunteer.org.il/"> הרשת הישראלית להתנדבות.</a></p>
+                                </div>
+                                <div class="imgPlusTxtAbout Hit">
+                                    <img src="img/logo-HIT.png" style="width: 117px;" />
+                                    <div>
+                                        <div style="margin-bottom:30px">
+                                            <h3>צוות הפרוייקט:</h3>
+                                            <p style="width: fit-content">אורי אלון ומאי אלעזר.</p>
+                                        </div>
+
+                                        <div>
+                                            <h3>מנחות הפרוייקט:</h3>
+                                            <p>גב' סיגל פרלמן וגב' רעות טייטלר</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgPlusTxtAbout Hit">
+                                    <img src="img/logo-reshet.png" style="width: 111px;" />
+                                    <div>
+                                        <h3>צוות מטעם הארגון:</h3>
+                                        <p>גב' תמר ברגר וגב' ליאורה ארנון.</p>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section id="sectionProfile">
+                <h2 id="headerProfile">הפרופיל שלי</h2>
+                <p id="Pprofile">כל הטיפים שאהבת במקום אחד</p>
+            </section>
+            <div id="containTips"></div>
+        </div>
+    </article>
+
+    <footer>
+        <a id="aboutLink" href="#">מי אנחנו?</a>
+
+        <p id="Pfooter">תוצר זה פותח במסגרת פרוייקט גמר לתואר ראשון<a target="”_blank”" href="https://www.hit.ac.il/telem/overview"> בפקולטה לטכנולוגיות למידה </a>,HIT ובשיתוף הרשת הישראלית להתנדבות.</p>
+    </footer>
+
+
+</body>
+
+</html>

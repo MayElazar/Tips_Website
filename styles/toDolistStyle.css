@@ -1,0 +1,535 @@
+/*import Assistent Font*/
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+
+::-webkit-scrollbar {
+    width: 8px;
+    direction: rtl;
+    /*height: 4px;*/
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B3AFB3;
+    border-radius: 30px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #B3AFB3;
+    }
+
+::-webkit-scrollbar-track {
+    background: #F0F0F0;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------*/
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Assistant;
+
+     height: 100%;
+   /* min-height: 100%;*/
+    /* display: flex; */
+    /* position: relative; */
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    /* min-height: 114vh;*/
+}
+
+#containerToDoListpage {
+    min-height: 100%;
+}
+
+h2, p, h3 {
+    font-family: Assistant;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    text-align: right;
+    /* margin-right: 90px;*/
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+span {
+    font-family: 'Assistant';
+    font-size: larger;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+/*Header*/
+header {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    /* background-color: yellowgreen; */
+    height: 108px;
+    background-color: white;
+    /*-webkit-box-shadow: 0px 7px 14px -9px rgb(0 0 0 / 80%);
+    box-shadow: 0px 7px 14px -9px rgb(0 0 0 / 80%);
+    -moz-box-shadow: 0px 7px 14px -9px rgb(0 0 0 / 80%);*/
+}
+
+/*nav{
+    padding:10px;
+}*/
+#TipsLI {
+    margin-right: 10px;
+}
+
+ul {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    /* background-color: yellowgreen; */
+    height: 108px;
+    background-color: white;
+    /*-webkit-box-shadow: 0px 7px 14px -9px rgb(0 0 0 / 80%);
+    box-shadow: 0px 7px 14px -9px rgb(0 0 0 / 80%);
+    -moz-box-shadow: 0px 7px 14px -9px rgb(0 0 0 / 80%);*/
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 10px;
+    border-bottom: solid 1px lightsteelblue;
+    padding-bottom: 10px;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+}
+
+.deleteItem {
+    order: 2;
+    margin-right: auto;
+    border: none;
+    background-color: transparent;
+}
+
+.deleteItemIMG{
+height: 25px;
+}
+
+#addItemBtn {
+    color: #3f4c9b;
+    background-color: #ffffff;
+    width: 178px;
+   
+    /* bottom: 1px; */
+    /* left: 60px; */
+    margin-bottom: 16px;
+    border: #3f4c9b solid;
+    border-radius: 7px;
+    font-family: 'Assistant';
+    font-size: large;
+    font-weight: 600;
+    margin-top: 21px;
+}
+
+#downloadPdf {
+    color: white;
+    background-color: #3F4C9B;
+    width: 143px;
+    height: 38px;
+    position: inherit;
+    /* bottom: 1px; */
+    /* left: 60px; */
+    border: none;
+    margin-top: 16px;
+    /* margin-bottom: -15px; */
+    border-radius: 7px;
+    font-family: 'Assistant';
+    font-size: large;
+    float: left;
+    /* margin-left: 60px;*/
+}
+/***********************/
+    nav ul li ul {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    height: fit-content;
+    /* background-color: bisque; */
+    width: fit-content;
+    left: 8px;
+    padding-bottom: 10px;
+    /* border: solid black; */
+    /* box-shadow: 0 10px 24px 0px rgb(0 0 0 / 2%), 0 8px 20px -2px rgb(0 0 0 / 6%), 0 6px 10px -6px rgb(0 0 0 / 10%); */
+    /* border-radius: 25px; */
+    -webkit-box-shadow: 0px 1px 10px 6px rgb(0 0 0 / 6%);
+    box-shadow: 0px 1px 10px 6px rgb(0 0 0 / 6%);
+    border-radius: 10px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+
+nav ul li ul li:nth-child(1), nav ul li ul li:nth-child(2) {
+    display: inline-block;
+}
+
+
+
+
+nav ul li:hover ul li:nth-child(1), nav ul li:hover ul li:nth-child(2) {
+    display: inline-block;
+}
+
+
+nav ul li ul li:nth-child(1) {
+    border-left: solid black 1px;
+    padding-left: 5px;
+}
+
+
+nav ul li ul li:nth-child(3) {
+    border-top: solid black 1px;
+}
+/******/
+
+
+
+nav ul li:hover ul li {
+    align-items: center;
+}
+
+    nav ul li:hover ul li:hover {
+        cursor: pointer;
+        -webkit-box-shadow: 0px 7px 14px -9px rgb(0 0 0 / 80%);
+        box-shadow: 0px 7px 14px -9px rgb(0 0 0 / 80%);
+        -moz-box-shadow: 0px 7px 14px -9px rgb(0 0 0 / 80%);
+    }
+
+a {
+    text-decoration: none;
+    font-family: Assistant;
+    color: black;
+}
+
+h1 img {
+    width: 146px;
+    /*width: 140px;*/
+    float: right;
+}
+
+nav {
+    background-color: white;
+    width: 100%;
+    /* background-image:url(../img/shareWhatsapp.png);*/
+}
+
+#profilePic {
+    float: left;
+    margin-left: 16px;
+}
+
+
+
+#ProfilePicImg {
+    width: 85px;
+    cursor: pointer;
+    margin-right: -14px;
+}
+
+#userNameP {
+    font-size: 1.2rem;
+    text-align: center;
+}
+/************************/
+#addItemCon {
+    display: inline-flex;
+    margin-bottom: 26px;
+}
+
+#TextList {
+    width: 177px;
+    height: 39px;
+    font-size: 20px;
+    font-family: 'Assistant';
+}
+
+#deleteAddItem {
+    display: grid;
+    justify-items: center;
+    border: none;
+    background-color: transparent;
+}
+
+    #deleteAddItem img {
+        width: 22px;
+    }
+    #deleteAddItem span {
+        font-size: 14px;
+    }
+
+#addToList {
+    display: grid;
+    justify-items: center;
+    border: none;
+    background-color: transparent;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+    #addToList img{
+    width: 22px;
+}
+
+    #addToList span {
+        font-size: 14px;
+    }
+
+
+
+    input[type=checkbox] {
+        opacity: 0;
+    }
+
+
+
+
+.checkbox {
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-transition: border-color ease 0.2s;
+    -o-transition: border-color ease 0.2s;
+    -webkit-transition: border-color ease 0.2s;
+    transition: border-color ease 0.2s;
+    cursor: pointer;
+    margin-left: 14px;
+}
+
+    .checkbox::before,
+    .checkbox::after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        height: 0;
+        width: 4px;
+        background-color: #34b93d;
+        display: inline-block;
+        -moz-transform-origin: left top;
+        -ms-transform-origin: left top;
+        -o-transform-origin: left top;
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+        border-radius: 40px;
+        content: ' ';
+        -webkit-transition: opacity ease .5;
+        -moz-transition: opacity ease .5;
+        transition: opacity ease .5;
+    }
+
+    .checkbox::before {
+        top: 20px;
+        left: 14px;
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        -webkit-transform: rotate( -135deg );
+        transform: rotate( -135deg );
+    }
+    
+
+    .checkbox::after {
+        top: 9px;
+        left: 2px;
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -webkit-transform: rotate( -45deg );
+        transform: rotate( -45deg );
+    }
+
+.active {
+    border-color: #34b93d;
+}
+
+    .active::after {
+        height: 50px;
+        -moz-animation: dothabottomcheck 0.2s ease 0s forwards;
+        -o-animation: dothabottomcheck 0.2s ease 0s forwards;
+        -webkit-animation: dothabottomcheck 0.2s ease 0s forwards;
+        animation: dothabottomcheck 0.2s ease 0s forwards;
+    }
+
+    .active::before {
+        height: 120px;
+        -moz-animation: dothatopcheck 0.4s ease 0s forwards;
+        -o-animation: dothatopcheck 0.4s ease 0s forwards;
+        -webkit-animation: dothatopcheck 0.4s ease 0s forwards;
+        animation: dothatopcheck 0.4s ease 0s forwards;
+    }
+
+#toDoListConteiner{
+margin: 0 auto;
+box-shadow: 0 10px 24px 0px rgb(0 0 0 / 2%), 0 8px 20px -2px rgb(0 0 0 / 6%), 0 6px 10px -6px rgb(0 0 0 / 10%);
+-webkit-box-shadow: 0px 1px 10px 6px rgb(0 0 0 / 6%);
+box-shadow: 0px 1px 10px 6px rgb(0 0 0 / 6%);
+
+height: fit-content;
+padding:16px;
+}
+
+#listContainer {
+    width: 50%;
+    margin: 0 auto;
+}
+/**************************/
+footer {
+    height: 16px;
+    background-color: white;
+    box-shadow: 0 10px 24px 0px rgb(0 0 0 / 2%), 0 8px 20px -2px rgb(0 0 0 / 6%), 0 6px 10px -6px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0px 1px 10px 6px rgb(0 0 0 / 6%);
+    box-shadow: 0px 1px 10px 6px rgb(0 0 0 / 6%);
+    padding: 12px;
+    margin-top: auto;
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: calc(100% - 27px);
+    margin-bottom: -39px;
+}
+
+#Pfooter {
+    float: left;
+    font-size: 13px;
+}
+
+    #Pfooter a {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+/*about*/
+.imgPlusTxtAbout {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.Aabout {
+    text-decoration: underline;
+    color: steelblue;
+}
+/*************************/
+
+/**********************************Animations****************************/
+
+/* Checkmark style starts */
+@-moz-keyframes dothabottomcheck {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 15px;
+    }
+}
+
+@-webkit-keyframes dothabottomcheck {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 15px;
+    }
+}
+
+@keyframes dothabottomcheck {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 15px;
+    }
+}
+
+@keyframes dothatopcheck {
+    0% {
+        height: 0;
+    }
+
+    50% {
+        height: 0;
+    }
+
+    100% {
+        height: 30px;
+    }
+}
+
+@-webkit-keyframes dothatopcheck {
+    0% {
+        height: 0;
+    }
+
+    50% {
+        height: 0;
+    }
+
+    100% {
+        height: 30px;
+    }
+}
+
+@-moz-keyframes dothatopcheck {
+    0% {
+        height: 0;
+    }
+
+    50% {
+        height: 0;
+    }
+
+    100% {
+        height: 30px;
+    }
+}
+
+
