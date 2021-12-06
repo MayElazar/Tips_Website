@@ -9,4 +9,6 @@ Asp.Net,
 Html,
 JS,
 Css,
-Sql DB
+Sql DB.
+
+I build and design It with my peer - Ori Allon.
