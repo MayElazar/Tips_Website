@@ -53,3 +53,4 @@ The backend was built with C#, Asp.Net, Sql DB.
 
 ![image](https://user-images.githubusercontent.com/24205331/149300564-aa8017a5-3db5-4424-8c3e-da5d5a5b5d33.png)
 
+Link to the site - https://projects.telem-hit.net/2021/Tips_OriMay/index.html 
